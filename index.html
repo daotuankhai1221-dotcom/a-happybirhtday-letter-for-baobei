@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Baobei ♡</title>
+
+
+<!-- =========================
+     GOOGLE FONTS
+========================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+
+    background: #0b1020;
+
+    color: #f4f1ea;
+
+    font-family: "Inter", sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(167,139,250,.11),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(125,211,252,.08),
+            transparent 32%
+        ),
+
+        #0b1020;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.star {
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.75);
+
+    animation: twinkle 4s ease-in-out infinite;
+}
+
+.star:nth-child(1) {
+    top: 13%;
+    left: 12%;
+    animation-delay: .3s;
+}
+
+.star:nth-child(2) {
+    top: 24%;
+    left: 78%;
+    animation-delay: 1.2s;
+}
+
+.star:nth-child(3) {
+    top: 65%;
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.star:nth-child(4) {
+    top: 73%;
+    left: 84%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(5) {
+    top: 37%;
+    left: 48%;
+    animation-delay: 2.5s;
+}
+
+.star:nth-child(6) {
+    top: 83%;
+    left: 57%;
+    animation-delay: .8s;
+}
+
+.star:nth-child(7) {
+    top: 11%;
+    left: 61%;
+    animation-delay: 1.8s;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: .15;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================================================
+   ALL SCREENS
+========================================================= */
+
+.screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        visibility .7s ease;
+}
+
+.screen.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    width: min(680px, 100%);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   OPENING — WHALE
+========================================================= */
+
+.whale {
+
+    font-size: 76px;
+
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    animation: whaleFloat 4s ease-in-out infinite;
+}
+
+@keyframes whaleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(2deg);
+    }
+}
+
+
+.small-label {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #aeb6cc;
+
+    margin-bottom: 18px;
+}
+
+
+.open-title {
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(52px, 11vw, 84px);
+
+    line-height: 1;
+}
+
+
+.open-title span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #c9c2ff;
+}
+
+
+.date {
+
+    margin: 30px 0 42px;
+
+    color: #aeb6cc;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+
+    border: 1px solid rgba(244,241,234,.25);
+
+    background: rgba(255,255,255,.035);
+
+    color: #f4f1ea;
+
+    padding: 14px 29px;
+
+    border-radius: 50px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        border .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.btn:hover {
+
+    background: rgba(167,139,250,.13);
+
+    border-color: rgba(167,139,250,.6);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(167,139,250,.12);
+}
+
+
+/* =========================================================
+   CAT
+   CẬN MẶT — CSS DRAWING
+========================================================= */
+
+.cat-wrap {
+
+    width: 120px;
+
+    height: 105px;
+
+    margin: 0 auto 30px;
+
+    position: relative;
+
+    animation: catFloat 3.5s ease-in-out infinite;
+}
+
+
+@keyframes catFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* FACE */
+
+.cat-face {
+
+    position: absolute;
+
+    width: 92px;
+
+    height: 78px;
+
+    left: 14px;
+
+    top: 20px;
+
+    background: #ddd7d0;
+
+    border-radius:
+        45% 45%
+        48% 48%;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.25);
+}
+
+
+/* EARS */
+
+.cat-ear-left,
+.cat-ear-right {
+
+    position: absolute;
+
+    width: 35px;
+
+    height: 35px;
+
+    top: 2px;
+
+    background: #ddd7d0;
+}
+
+.cat-ear-left {
+
+    left: 13px;
+
+    transform:
+        rotate(-30deg)
+        skewY(10deg);
+
+    border-radius: 8px 4px 4px 4px;
+}
+
+.cat-ear-right {
+
+    right: 13px;
+
+    transform:
+        rotate(30deg)
+        skewY(-10deg);
+
+    border-radius: 4px 8px 4px 4px;
+}
+
+
+/* INNER EARS */
+
+.cat-ear-left::after,
+.cat-ear-right::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    background: #f0abfc;
+
+    opacity: .65;
+}
+
+.cat-ear-left::after {
+
+    left: 7px;
+
+    top: 7px;
+
+    transform: rotate(0deg);
+}
+
+.cat-ear-right::after {
+
+    right: 7px;
+
+    top: 7px;
+}
+
+
+/* EYES */
+
+.cat-eye {
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 13px;
+
+    background: #242437;
+
+    border-radius: 50%;
+
+    top: 45px;
+
+    animation: blink 5s infinite;
+}
+
+.cat-eye.left {
+
+    left: 35px;
+}
+
+.cat-eye.right {
+
+    right: 35px;
+}
+
+
+@keyframes blink {
+
+    0%,
+    45%,
+    48%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    46%,
+    47% {
+        transform: scaleY(.08);
+    }
+}
+
+
+/* NOSE */
+
+.cat-nose {
+
+    position: absolute;
+
+    width: 9px;
+
+    height: 7px;
+
+    background: #e7a7b9;
+
+    border-radius: 50%;
+
+    left: 41px;
+
+    top: 60px;
+}
+
+
+/* MOUTH */
+
+.cat-mouth {
+
+    position: absolute;
+
+    width: 14px;
+
+    height: 8px;
+
+    left: 39px;
+
+    top: 65px;
+
+    border-bottom:
+        1.5px solid #4b4650;
+
+    border-radius: 50%;
+}
+
+
+/* WHISKERS */
+
+.whisker {
+
+    position: absolute;
+
+    width: 28px;
+
+    height: 1px;
+
+    background: rgba(60,55,65,.45);
+
+    top: 62px;
+}
+
+.whisker.left.one {
+
+    left: -5px;
+
+    transform: rotate(8deg);
+}
+
+.whisker.left.two {
+
+    left: -7px;
+
+    top: 69px;
+
+    transform: rotate(-4deg);
+}
+
+.whisker.right.one {
+
+    right: -5px;
+
+    transform: rotate(-8deg);
+}
+
+.whisker.right.two {
+
+    right: -7px;
+
+    top: 69px;
+
+    transform: rotate(4deg);
+}
+
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.page-number {
+
+    color: #aeb6cc;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.page-title {
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(39px, 8vw, 60px);
+
+    margin-bottom: 28px;
+
+    line-height: 1.15;
+}
+
+
+.page-text {
+
+    color: #d9d7d2;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    font-weight: 300;
+
+    max-width: 610px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SPECIAL QUOTE
+========================================================= */
+
+.quote {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(23px, 5vw, 31px);
+
+    line-height: 1.6;
+
+    color: #ddd7ff;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   RAIN PAGE
+========================================================= */
+
+.rain-screen {
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(11,16,32,.05),
+            rgba(11,16,32,.3)
+        );
+}
+
+
+.rain {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    opacity: .35;
+}
+
+
+.drop {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 55px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(125,211,252,.55)
+        );
+
+    animation: rainFall linear infinite;
+}
+
+.drop:nth-child(1) {
+    left: 10%;
+    animation-duration: 1.1s;
+}
+
+.drop:nth-child(2) {
+    left: 25%;
+    animation-duration: .8s;
+    animation-delay: .2s;
+}
+
+.drop:nth-child(3) {
+    left: 42%;
+    animation-duration: 1s;
+}
+
+.drop:nth-child(4) {
+    left: 58%;
+    animation-duration: .9s;
+    animation-delay: .4s;
+}
+
+.drop:nth-child(5) {
+    left: 74%;
+    animation-duration: 1.2s;
+}
+
+.drop:nth-child(6) {
+    left: 89%;
+    animation-duration: .85s;
+    animation-delay: .3s;
+}
+
+@keyframes rainFall {
+
+    from {
+        transform:
+            translateY(-100px)
+            rotate(15deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(15deg);
+    }
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    left: 0;
+
+    right: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    z-index: 20;
+}
+
+
+.back-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: #7f879c;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    padding: 10px;
+
+    transition: color .3s ease;
+}
+
+.back-btn:hover {
+
+    color: #f4f1ea;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress {
+
+    position: fixed;
+
+    top: 22px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 7px;
+
+    z-index: 20;
+}
+
+
+.progress-dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.2);
+
+    transition:
+        background .4s ease,
+        transform .4s ease;
+}
+
+
+.progress-dot.active {
+
+    background: #a78bfa;
+
+    transform: scale(1.5);
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.ending-cat {
+
+    margin-bottom: 30px;
+}
+
+
+.final-title {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 9vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+}
+
+
+.final-text {
+
+    color: #aeb6cc;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+.flowers {
+
+    margin-top: 35px;
+
+    font-size: 20px;
+
+    letter-spacing: 8px;
+}
+
+
+/* =========================================================
+   2.4 EASTER EGG
+========================================================= */
+
+.age-secret {
+
+    margin-top: 42px;
+
+    color: rgba(201,194,255,.5);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding:
+            30px
+            22px
+            90px;
+    }
+
+
+    .whale {
+        font-size: 65px;
+    }
+
+
+    .open-title {
+        font-size: 56px;
+    }
+
+
+    .open-title span {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .date {
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .page-title {
+        font-size: 40px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .page-text {
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+
+    .quote {
+        font-size: 23px;
+    }
+
+
+    .navigation {
+        bottom: 22px;
+    }
+
+
+    .cat-wrap {
+        transform: scale(.9);
+
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   NO-OVERLAP PAGE LAYOUT
+   Navigation is part of the page flow instead of fixed.
+   Long pages can scroll without content hiding behind buttons.
+========================================================= */
+.screen.page {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: stretch;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.screen.page::-webkit-scrollbar {
+    display: none;
+}
+
+.screen.page .content {
+    margin: auto;
+    padding: 72px 0 30px;
+    box-sizing: border-box;
+}
+
+.navigation {
+    position: static !important;
+    margin-top: 28px;
+    padding-bottom: 4px;
+}
+
+.compact-text {
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compact-quote {
+    max-width: 570px;
+    margin: 28px auto 0;
+}
+
+@media (max-width: 600px) {
+    .screen.page .content {
+        width: 100%;
+        padding: 68px 4px 24px;
+    }
+
+    .screen.page .cat-wrap {
+        transform: scale(.72);
+        margin-bottom: 4px;
+    }
+
+    .screen.page .page-number {
+        margin-bottom: 10px;
+    }
+
+    .screen.page .page-title {
+        font-size: 29px;
+        line-height: 1.18;
+        margin-bottom: 18px;
+    }
+
+    .screen.page .compact-text {
+        font-size: 13.5px;
+        line-height: 1.65;
+        max-width: 350px;
+    }
+
+    .screen.page .compact-quote {
+        font-size: 18px;
+        line-height: 1.45;
+        max-width: 350px;
+        margin-top: 22px;
+    }
+
+    .screen.page .navigation {
+        margin-top: 24px;
+        padding-bottom: 6px;
+    }
+}
+
+/* Extra compact spacing specifically for pages 5–6 */
+@media (max-width: 600px) {
+    #page5 .content, #page6 .content {
+        padding-top: 62px;
+    }
+
+    #page5 .page-title, #page6 .page-title {
+        font-size: 27px;
+        margin-bottom: 16px;
+    }
+
+    #page5 .compact-text, #page6 .compact-text {
+        font-size: 13px;
+        line-height: 1.58;
+    }
+
+    #page5 .compact-quote, #page6 .compact-quote {
+        font-size: 17px;
+        line-height: 1.42;
+        margin-top: 20px;
+    }
+
+    #page5 .navigation, #page6 .navigation {
+        margin-top: 20px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="background">
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+</div>
+
+
+<!-- =========================================================
+     MUSIC
+     Đặt music.mp3 cùng thư mục với index.html
+========================================================= -->
+
+<audio id="music" loop>
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- =========================================================
+     OPENING
+     CÁ VOI
+========================================================= -->
+
+<section
+    id="opening"
+    class="screen active">
+
+    <div class="content">
+
+        <div class="whale">
+            🐋
+        </div>
+
+
+        <div class="small-label">
+            A little letter
+        </div>
+
+
+        <h1 class="open-title">
+
+            For Baobei
+
+            <span>
+                written with a little warmth
+            </span>
+
+        </h1>
+
+
+        <div class="date">
+            11.09.2026
+        </div>
+
+
+        <button
+            class="btn"
+            onclick="openCard()">
+
+            Mở thiệp ♡
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRESS
+========================================================= -->
+
+<div
+    id="progress"
+    class="progress"
+    style="display:none;">
+
+    <div class="progress-dot"></div>
+
+    <div class="progress-dot"></div>
+
+    <div class="progress-dot"></div>
+
+    <div class="progress-dot"></div>
+
+    <div class="progress-dot"></div>
+
+    <div class="progress-dot"></div>
+
+    <div class="progress-dot"></div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 1
+========================================================= -->
+
+<section
+    class="screen page"
+    id="page1">
+
+    <div class="content">
+
+
+        <!-- CAT -->
+
+        <div class="cat-wrap">
+
+            <div class="cat-ear-left"></div>
+
+            <div class="cat-ear-right"></div>
+
+            <div class="cat-face">
+
+                <div class="cat-eye left"></div>
+
+                <div class="cat-eye right"></div>
+
+                <div class="cat-nose"></div>
+
+                <div class="cat-mouth"></div>
+
+                <div class="whisker left one"></div>
+
+                <div class="whisker left two"></div>
+
+                <div class="whisker right one"></div>
+
+                <div class="whisker right two"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            01 / 07
+        </div>
+
+
+        <h1 class="page-title">
+            Tháng cũ ☁️
+        </h1>
+
+
+        <p class="page-text">
+
+            Vậy là hôm nay đã là
+            <strong>11/09</strong> rồi —
+            cũng là ngày đầu tiên của tháng 8 âm lịch.
+
+            <br><br>
+
+            Tui chợt nghĩ, có lẽ đây cũng là
+            một thời điểm khá đẹp để nói với bé
+            một điều:
+
+            <br><br>
+
+            <span class="quote">
+                Mong những chuyện không vui
+                của tháng cũ,
+                mình để nó ở lại đó thôi. ☁️
+            </span>
+
+        </p>
+
+
+        <div class="navigation">
+
+            <button
+                class="btn"
+                onclick="nextPage()">
+
+                Tiếp tục →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 2
+========================================================= -->
+
+<section
+    class="screen page"
+    id="page2">
+
+    <div class="content">
+
+
+        <div class="cat-wrap">
+
+            <div class="cat-ear-left"></div>
+
+            <div class="cat-ear-right"></div>
+
+            <div class="cat-face">
+
+                <div class="cat-eye left"></div>
+
+                <div class="cat-eye right"></div>
+
+                <div class="cat-nose"></div>
+
+                <div class="cat-mouth"></div>
+
+                <div class="whisker left one"></div>
+
+                <div class="whisker left two"></div>
+
+                <div class="whisker right one"></div>
+
+                <div class="whisker right two"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            02 / 07
+        </div>
+
+
+        <h1 class="page-title">
+            Tháng 7 🌙
+        </h1>
+
+
+        <p class="page-text">
+
+            Tháng 7 vừa rồi hình như chẳng
+            nhẹ nhàng với bé một chút nào.
+
+            <br><br>
+
+            Từ công việc, những chuyện không vui
+            ở môi trường cũ, những drama và những
+            điều khiến bé phải mệt mỏi…
+
+            <br><br>
+
+            Cho đến những chuyện rất nhỏ trong
+            cuộc sống hằng ngày cũng cứ nối tiếp nhau
+            chẳng được suôn sẻ.
+
+        </p>
+
+
+        <div class="navigation">
+
+            <button
+                class="back-btn"
+                onclick="prevPage()">
+
+                ← Quay lại
+
+            </button>
+
+
+            <button
+                class="btn"
+                onclick="nextPage()">
+
+                Tiếp tục →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 3 — RAIN
+========================================================= -->
+
+<section
+    class="screen page rain-screen"
+    id="page3">
+
+
+    <div class="rain">
+
+        <div class="drop"></div>
+
+        <div class="drop"></div>
+
+        <div class="drop"></div>
+
+        <div class="drop"></div>
+
+        <div class="drop"></div>
+
+        <div class="drop"></div>
+
+    </div>
+
+
+    <div class="content">
+
+
+        <div class="cat-wrap">
+
+            <div class="cat-ear-left"></div>
+
+            <div class="cat-ear-right"></div>
+
+            <div class="cat-face">
+
+                <div class="cat-eye left"></div>
+
+                <div class="cat-eye right"></div>
+
+                <div class="cat-nose"></div>
+
+                <div class="cat-mouth"></div>
+
+                <div class="whisker left one"></div>
+
+                <div class="whisker left two"></div>
+
+                <div class="whisker right one"></div>
+
+                <div class="whisker right two"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            03 / 07
+        </div>
+
+
+        <h1 class="page-title">
+            Cơn mưa 🌧️
+        </h1>
+
+
+        <p class="page-text">
+
+            Đến cả hôm qua, bé vừa đi học makeup
+            về xong thì ông trời lại “tặng” thêm
+            cho một trận mưa thật to nữa.
+
+            <br><br>
+
+            Tui cũng không biết nên nói gì ngoài câu:
+
+        </p>
+
+
+        <br>
+
+
+        <p class="quote">
+
+            “Thôi mà Baobei,
+            tháng 7 qua rồi,
+            cho bé được yên một chút đi chứ.” 🥹
+
+        </p>
+
+
+        <div class="navigation">
+
+            <button
+                class="back-btn"
+                onclick="prevPage()">
+
+                ← Quay lại
+
+            </button>
+
+
+            <button
+                class="btn"
+                onclick="nextPage()">
+
+                Tiếp tục →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 4 — SAM
+========================================================= -->
+
+<section
+    class="screen page"
+    id="page4">
+
+    <div class="content">
+
+
+        <div class="cat-wrap">
+
+            <div class="cat-ear-left"></div>
+
+            <div class="cat-ear-right"></div>
+
+            <div class="cat-face">
+
+                <div class="cat-eye left"></div>
+
+                <div class="cat-eye right"></div>
+
+                <div class="cat-nose"></div>
+
+                <div class="cat-mouth"></div>
+
+                <div class="whisker left one"></div>
+
+                <div class="whisker left two"></div>
+
+                <div class="whisker right one"></div>
+
+                <div class="whisker right two"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            04 / 07
+        </div>
+
+
+        <h1 class="page-title">
+            Có một điều tui để ý...
+        </h1>
+
+
+        <p class="page-text">
+
+            Bé lúc nào nhìn cũng rất điềm đạm.
+
+            Có một vẻ gì đó rất chắc chắn,
+            như thể dù có chuyện gì xảy ra
+            thì bé vẫn có thể tự mình đứng vững được.
+
+            <br><br>
+
+            Nhưng tui biết, hoặc ít nhất là tui
+            cảm nhận được, rằng phía sau vẻ ngoài đó
+            chắc hẳn vẫn có rất nhiều chuyện
+            bé giữ lại cho riêng mình.
+
+            <br><br>
+
+            Có những chuyện bé không kể.
+
+            <br>
+
+            Có những điều bé tự suy nghĩ
+            rồi tự mình giải quyết.
+
+            <br>
+
+            Và có lẽ cũng có những lúc bé mệt,
+            nhưng vẫn chọn cách im lặng
+            và nói rằng mình ổn.
+
+        </p>
+
+
+        <div class="navigation">
+
+            <button
+                class="back-btn"
+                onclick="prevPage()">
+
+                ← Quay lại
+
+            </button>
+
+
+            <button
+                class="btn"
+                onclick="nextPage()">
+
+                Tiếp tục →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 5 — DON'T HAVE TO BE STRONG
+========================================================= -->
+
+<section class="screen page" id="page5">
+
+    <div class="content">
+
+        <div class="cat-wrap">
+            <div class="cat-ear-left"></div>
+            <div class="cat-ear-right"></div>
+            <div class="cat-face">
+                <div class="cat-eye left"></div>
+                <div class="cat-eye right"></div>
+                <div class="cat-nose"></div>
+                <div class="cat-mouth"></div>
+                <div class="whisker left one"></div>
+                <div class="whisker left two"></div>
+                <div class="whisker right one"></div>
+                <div class="whisker right two"></div>
+            </div>
+        </div>
+
+        <div class="page-number">05 / 07</div>
+
+        <h1 class="page-title">Bé không cần phải mạnh mẽ mãi đâu 🌷</h1>
+
+        <div class="page-text compact-text">Tui không dám nói rằng tui hiểu hết những gì bé đang nghĩ, vì có những điều chỉ chính bé mới biết được.<br><br>Nhưng tui vẫn mong một điều thôi…</div>
+
+        <p class="quote compact-quote"><strong>Bé không cần lúc nào cũng phải mạnh mẽ như vậy đâu. 🌷</strong></p>
+
+        <div class="navigation">
+            <button class="back-btn" onclick="prevPage()">← Quay lại</button>
+            <button class="btn" onclick="nextPage()">Tiếp tục →</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="screen page" id="page6">
+
+    <div class="content">
+
+        <div class="cat-wrap">
+            <div class="cat-ear-left"></div>
+            <div class="cat-ear-right"></div>
+            <div class="cat-face">
+                <div class="cat-eye left"></div>
+                <div class="cat-eye right"></div>
+                <div class="cat-nose"></div>
+                <div class="cat-mouth"></div>
+                <div class="whisker left one"></div>
+                <div class="whisker left two"></div>
+                <div class="whisker right one"></div>
+                <div class="whisker right two"></div>
+            </div>
+        </div>
+
+        <div class="page-number">06 / 07</div>
+
+        <h1 class="page-title">Bắt đầu lại nhé 🌙</h1>
+
+        <div class="page-text compact-text">Tui mong tuổi mới của bé sẽ khác đi một chút. ✨<br><br>Mong những ngày phía trước sẽ <strong>dịu dàng với bé hơn</strong>.<br><br>Mong công việc mới, những người mới và những điều mới sẽ mang đến cho bé nhiều niềm vui hơn là mệt mỏi.</div>
+
+        <p class="quote compact-quote">Nếu tháng 7 đã đem đến cho bé hơi nhiều chuyện không vui rồi…<br><br><strong>thì thôi, tháng 8 mình làm lại từ đầu nhé. 🌙</strong></p>
+
+        <div class="navigation">
+            <button class="back-btn" onclick="prevPage()">← Quay lại</button>
+            <button class="btn" onclick="nextPage()">Tiếp tục →</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PAGE 7 — BIRTHDAY
+========================================================= -->
+
+<section
+    class="screen page"
+    id="page7">
+
+    <div class="content">
+
+
+        <div class="cat-wrap ending-cat">
+
+            <div class="cat-ear-left"></div>
+
+            <div class="cat-ear-right"></div>
+
+            <div class="cat-face">
+
+                <div class="cat-eye left"></div>
+
+                <div class="cat-eye right"></div>
+
+                <div class="cat-nose"></div>
+
+                <div class="cat-mouth"></div>
+
+                <div class="whisker left one"></div>
+
+                <div class="whisker left two"></div>
+
+                <div class="whisker right one"></div>
+
+                <div class="whisker right two"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            07 / 07
+        </div>
+
+
+        <h1 class="final-title">
+
+            Chúc mừng sinh nhật,
+            Baobei. 🎂🤍
+
+        </h1>
+
+
+        <p class="final-text">
+
+            Chúc bé tuổi mới thật bình an,
+            thật nhiều niềm vui.
+
+            <br><br>
+
+            Mong rằng từ hôm nay trở đi,
+            mỗi ngày của bé sẽ có thêm
+            một chút may mắn,
+            một chút nhẹ nhàng
+            và thật nhiều điều khiến bé mỉm cười.
+
+        </p>
+
+
+        <div class="flowers">
+            🌷 ✦ 🌷
+        </div>
+
+
+        <p
+            class="quote"
+            style="margin-top:35px;">
+
+            Happy Birthday, Sam. 🌷✨
+
+        </p>
+
+
+        <!-- EASTER EGG -->
+
+        <div class="age-secret">
+
+            to another little chapter —
+            2.4 tuổi 🌙
+
+        </div>
+
+
+        <div class="navigation">
+
+            <button
+                class="back-btn"
+                onclick="prevPage()">
+
+                ← Quay lại
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let currentPage = 0;
+
+const totalPages = 7;
+
+const music =
+    document.getElementById("music");
+
+const progress =
+    document.getElementById("progress");
+
+
+/* =========================================================
+   GET SCREEN
+========================================================= */
+
+function getPage(page) {
+
+    return document.getElementById(
+        "page" + page
+    );
+
+}
+
+
+/* =========================================================
+   OPEN CARD
+========================================================= */
+
+function openCard() {
+
+    const opening =
+        document.getElementById("opening");
+
+
+    /* MUSIC */
+
+    music.volume = 0.30;
+
+    music.play().catch(() => {
+
+        console.log(
+            "Music requires user interaction."
+        );
+
+    });
+
+
+    /* FADE OPENING */
+
+    opening.classList.remove("active");
+
+
+    setTimeout(() => {
+
+        opening.style.display = "none";
+
+        progress.style.display = "flex";
+
+        currentPage = 1;
+
+        getPage(currentPage)
+            .classList.add("active");
+
+        updateProgress();
+
+    }, 700);
+
+}
+
+
+/* =========================================================
+   NEXT PAGE
+========================================================= */
+
+function nextPage() {
+
+    if (currentPage >= totalPages) {
+        return;
+    }
+
+
+    const oldPage =
+        getPage(currentPage);
+
+
+    const next =
+        currentPage + 1;
+
+
+    oldPage.classList.remove("active");
+
+
+    setTimeout(() => {
+
+        currentPage = next;
+
+        getPage(currentPage)
+            .classList.add("active");
+
+        updateProgress();
+
+    }, 250);
+
+}
+
+
+/* =========================================================
+   PREVIOUS PAGE
+========================================================= */
+
+function prevPage() {
+
+    if (currentPage <= 1) {
+        return;
+    }
+
+
+    const oldPage =
+        getPage(currentPage);
+
+
+    const previous =
+        currentPage - 1;
+
+
+    oldPage.classList.remove("active");
+
+
+    setTimeout(() => {
+
+        currentPage = previous;
+
+        getPage(currentPage)
+            .classList.add("active");
+
+        updateProgress();
+
+    }, 250);
+
+}
+
+
+/* =========================================================
+   UPDATE PROGRESS
+========================================================= */
+
+function updateProgress() {
+
+    const dots =
+        document.querySelectorAll(
+            ".progress-dot"
+        );
+
+
+    dots.forEach((dot, index) => {
+
+        dot.classList.toggle(
+            "active",
+            index === currentPage - 1
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   KEYBOARD SUPPORT
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (currentPage === 0) {
+            return;
+        }
+
+
+        if (event.key === "ArrowRight") {
+
+            nextPage();
+
+        }
+
+
+        if (event.key === "ArrowLeft") {
+
+            prevPage();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   SWIPE SUPPORT — MOBILE
+========================================================= */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+document.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+);
+
+
+document.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+
+        handleSwipe();
+
+    },
+    { passive: true }
+);
+
+
+function handleSwipe() {
+
+    const difference =
+        touchEndX - touchStartX;
+
+
+    if (Math.abs(difference) < 60) {
+        return;
+    }
+
+
+    if (difference < 0) {
+
+        nextPage();
+
+    } else {
+
+        prevPage();
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
